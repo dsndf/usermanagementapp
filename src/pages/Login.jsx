@@ -48,12 +48,12 @@ const Login = () => {
   };
 
   return (
-    <div className="h-[100vh] flex justify-center items-center p-6">
+    <div className="h-[100vh] flex justify-center  p-6">
       {isLoading ? (
         <Loader label="Authenticating" />
       ) : (
         <div className=" w-[400px]">
-          <h3 className="text-center text-2xl ">LOGIN</h3>
+          <h3 className="text-center text-2xl  font-medium">LOGIN</h3>
           <form
             onSubmit={loginSubmitHandler}
             action=""

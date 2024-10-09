@@ -93,12 +93,12 @@ const EditUser = () => {
 
   console.log({ user });
   return (
-    <div className="h-[100vh] flex justify-center items-center p-6">
+    <div className="h-[100vh] flex justify-center  p-6">
       {isLoading ? (
         <Loader label="Fetching user..." />
       ) : (
         <div className=" w-[400px]">
-          <h3 className="text-center text-2xl ">EDIT LOGIN</h3>
+          <h3 className="text-center text-2xl font-medium ">EDIT LOGIN</h3>
           <form
             onSubmit={updateUserHandler}
             action=""
