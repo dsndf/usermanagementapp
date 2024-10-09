@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import FormInput from "../components/shared/FormInput";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
@@ -9,8 +9,7 @@ import { useInputValidation } from "../hooks/useInputValidation";
 import toast from "react-hot-toast";
 
 const EditUser = () => {
-  const { isLoading, startLoading, stopLoading, setUsers } =
-    useContext(Context);
+  const { isLoading, startLoading, stopLoading } = useContext(Context);
   const [user, setUser] = useState({});
   const { id } = useParams();
   const navigate = useNavigate();
@@ -49,9 +48,7 @@ const EditUser = () => {
   const fetchUser = async () => {
     try {
       startLoading();
-      const { data: result, status } = await axios.get(
-        reqResApi + "/users/" + id
-      );
+      const { data: result } = await axios.get(reqResApi + "/users/" + id);
       setUser(result.data);
     } catch (error) {
       console.log(error);
@@ -76,6 +73,7 @@ const EditUser = () => {
       setUser(result);
       toast.success("User updated");
     } catch (error) {
+      console.log(error)  
       toast.error("Failed to update user");
     } finally {
       stopLoading();

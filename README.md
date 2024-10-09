@@ -1,91 +1,99 @@
-User Management App
-This project is a User Management App built using React, Vite, and Tailwind CSS. It includes features such as user interaction, routing, and modal handling.
+# User Management App
 
-Features
-React for building the UI.
-Vite for fast builds and development environment.
-Tailwind CSS for styling.
-Axios for API requests.
-React Router for managing navigation and routes.
-React Icons for integrating icons.
-React Hot Toast for providing notifications.
-Responsive Modals using react-responsive-modal.
+A user management application that provides functionality for viewing, filtering, searching, editing, and deleting users. It includes pagination for the user list and uses Context API for global state management. Authentication is handled via session tokens stored in local storage.
 
-Pages
-/: Users List
-/edit/user/:id
-: Edit User
-/login: Login Page
-/notfound: Not Found Page
-Prerequisites
-Before running the project, ensure you have the following installed on your system:
+## Features
 
-Node.js (v14 or higher)
-npm or yarn
+- **User List**: View a list of users with pagination support.
+- **Filter & Search**: Filter users based on certain criteria and search by name or email.
+- **Edit & Delete**: Admins can edit or delete users.
+- **Authentication**: Session management using local storage for token storage.
+- **Global State Management**: Utilizes React's Context API for managing global state.
 
-Installation
-Clone the repository:
+## Project Structure
 
-git clone https://github.com/dsndf/usermanagementapp.git
+The project is powered by **React** and **Vite** for a fast development experience. **Tailwind CSS** is used for styling, while **Axios** is employed for API calls. The app is set up with **React Router** for routing and **Context API** for global state management.
 
-Navigate to the project directory:
+## Tech Stack
 
-cd usermanagementapp
+- **React 18.3.1**
+- **Vite** as the build tool
+- **Tailwind CSS** for styling
+- **Axios** for handling API requests
+- **React Router DOM** for routing
+- **Context API** for state management
+- **Local Storage** for token-based session management
 
-Install dependencies:
+## Prerequisites
 
-Using npm: npm install
-Or, using yarn: yarn install
+Before running the project, ensure you have the following installed:
 
-Running the Project
-After the dependencies are installed, you can run the project locally.
+- **Node.js** (v14 or higher)
+- **npm** or **yarn**
 
-Start the development server:
 
-Using npm: npm run dev
-Or, using yarn: yarn dev
-This will start the development server, and the app will be available at http://localhost:3000 (or another port if specified).
+## Run Locally
 
-Building the app for production:
+Clone the project
 
-To build the app for production: npm run build
-Or, using yarn: yarn build
-The production build will be stored in the dist folder.
+```bash
+  git clone https://github.com/dsndf/usermanagementapp
+```
 
-Preview the production build:
+Go to the project directory
 
-After building the project, you can preview the build by running: npm run preview
-Or, using yarn: yarn preview
+```bash
+  cd usermanagementapp
+```
 
-Linting
-To check and fix the code for any linting errors, use the following command:
+Install dependencies
 
-npm run lint
+```bash
+  npm install
+```
 
-Or, using yarn:
+Start the server
 
-yarn lint
+```bash
+  npm run dev
+```
 
-Assumptions and Considerations
-React Router is used for managing the navigation across different routes/pages.
-Tailwind CSS is used for styling, so there are no additional CSS files. You can customize the tailwind.config.js file for theme changes.
-Axios is used for making API requests; ensure to configure the base URL and manage API responses properly.
-Vite is used as the build tool for its fast and efficient bundling.
 
-Folder Structure
-user-management-app/
-├── node_modules/
-├── public/
-├── src/
-│   ├── assets/        # Images, logos, and static assets
-│   ├── components/    # Reusable UI components
-│   ├── pages/         # Pages for each route
-│   ├── App.jsx        # Main App component
-│   ├── index.jsx      # ReactDOM rendering
-├── .eslintrc.js       # ESLint configuration
-├── tailwind.config.js # Tailwind configuration
-├── package.json       # Project dependencies and scripts
-├── vite.config.js     # Vite configuration
-└── README.md          # Project documentation
-License
-This project is licensed under the MIT License.
+## Building the Project
+
+To build the project for production:
+
+```bash
+  npm run build
+```
+
+## Linting the Project
+
+Run the lint command to check for issues:
+
+```bash
+  npm run lint
+```
+
+## Assumptions and Considerations
+
+- **Session Management**: The application uses local storage to store session tokens for authentication purposes. No server-side session management is implemented.
+- **Authentication**: The project assumes a valid token is stored in local storage after a successful login. This token is required for authenticated API calls.
+- **Pagination**: Implemented to handle large datasets efficiently.
+- **Global State Management**: Managed using React's Context API to maintain consistent user data and session states across the app.
+- **API Integration**: Axios is used for handling API requests. The project assumes the necessary API endpoints are pre-configured and respond with expected data formats.
+
+## Future Enhancements
+
+- **Role-based Access Control**: Implement fine-grained access control to restrict actions like editing and deleting users based on the user's role (e.g., admin, editor, etc.).
+- **Server-side Session Management**: To improve security, session tokens can be managed on the server side instead of relying solely on local storage for token storage.
+- **Error Handling**: Enhance the application with robust error handling mechanisms for failed API calls to provide better user feedback and improve debugging.
+
+
+
+## License
+
+
+This structure uses the same format for every step. Let me know if any further tweaks are needed!
+
+

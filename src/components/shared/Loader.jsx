@@ -1,5 +1,3 @@
-import React from "react";
-
 const Loader = ({ label = "Loading" }) => {
   return (
     <div className="flex flex-col justify-center items-start gap-2">

@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { getSessionToken } from "../lib/helper";
 import axios from "axios";
 import { reqResApi } from "../constants/constants";
@@ -28,7 +28,6 @@ const ApiContext = ({ children }) => {
     } catch (error) {
       console.log(error);
       toast.error("Failed to fetch users");
-    } finally {
     }
   };
 

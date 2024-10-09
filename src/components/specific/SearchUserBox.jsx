@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import FormInput from "../shared/FormInput";
 import { Context } from "../../context/ApiContext";
 
@@ -11,6 +11,7 @@ const SearchUserBox = () => {
           value={search.value}
           changeHandler={search.changeHandler}
           placeholder={"Search user by name or email or id"}
+          type={"text"}
         />
       </form>
     </div>

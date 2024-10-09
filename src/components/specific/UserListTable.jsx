@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { MdDelete, MdEdit } from "react-icons/md";
 import { Context } from "../../context/ApiContext";
 import { useNavigate } from "react-router-dom";
@@ -48,9 +48,7 @@ const UserListTable = () => {
     if (!userToDelete) return;
     startLoading();
     try {
-      const { data } = await axios.delete(
-        reqResApi + "/users/" + userToDelete?.id
-      );
+      await axios.delete(reqResApi + "/users/" + userToDelete?.id);
       const remainedUsers = users.filter((user) => user.id !== userToDelete.id);
       setUsers(remainedUsers);
       toast.success(`User with ID ${userToDelete.id} deleted`);

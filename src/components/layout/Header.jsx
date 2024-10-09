@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import Logo from "../shared/Logo";
 import { Context } from "../../context/ApiContext";
 import { clearSession } from "../../lib/helper";
