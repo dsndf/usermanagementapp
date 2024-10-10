@@ -98,7 +98,7 @@ const EditUser = () => {
         <Loader label="Fetching user..." />
       ) : (
         <div className=" w-[400px]">
-          <h3 className="text-center text-2xl font-medium ">EDIT LOGIN</h3>
+          <h3 className="text-center text-2xl font-medium ">EDIT USER</h3>
           <form
             onSubmit={updateUserHandler}
             action=""
